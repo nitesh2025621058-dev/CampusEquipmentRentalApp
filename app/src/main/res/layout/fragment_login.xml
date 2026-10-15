@@ -73,6 +73,15 @@
             android:textSize="17sp" />
 
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_join"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/join_link" />
+
     </LinearLayout>
 
 </ScrollView>

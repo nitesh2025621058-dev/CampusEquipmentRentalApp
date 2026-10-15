@@ -31,6 +31,6 @@ class UserRepository {
 
     )
 
-    fun findByLoginId(id:String) : User ?= userList.find{ user -> user.loginId == id}
+    fun findByLoginId(id:String) : User ?= userList.find{ user -> user.userId == id}
 
 }
