@@ -1,6 +1,7 @@
 package com.example.campusequipmentrentalapp.ui.user
 
 import android.os.Bundle
+import android.os.LocaleList
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -22,6 +23,9 @@ class JoinFragment : Fragment(R.layout.fragment_join) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentJoinBinding.bind(view)
+        val inputLocales = LocaleList.forLanguageTags("ko-KR,en-US")
+        binding.etName.imeHintLocales = inputLocales
+        binding.etDepartment.imeHintLocales = inputLocales
         val roles = UserRole.values()
         binding.spinnerRole.adapter = ArrayAdapter(
             requireContext(), android.R.layout.simple_spinner_dropdown_item, roles.map { it.label }
